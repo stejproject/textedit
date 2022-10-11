@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html draggable="false">
+<head>
+<meta charset="utf-8">
+<title>Simple Web Text Editor with Live Preview</title>
+<meta name="google" content="notranslate">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/theme/monokai.min.css">
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/xml/xml.min.js" async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/javascript/javascript.min.js" async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/css/css.min.js" async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/htmlmixed/htmlmixed.min.js" async></script>
+</head>
+<body>
+  <form name="rrte">
+  <!-- NAVBAR -->
+  <div class="navbar text-center">
+<h2 class="title text-center border-bottom">Simple Live Preview Web Text Editor</h2>
+<input type="reset" value="DELETE EDIT" class="btn dang">
+<input type="button" value="LOREM IPSUM" class="btn texted" onClick="document.rrte.ans.value+='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'">
+<select class="btn html-das">
+  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='<...>'">HTML tag buka</option>
+  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='</...>'">HTML tag tutup</option>
+<optgroup label="TAG HTML WAJIB">
+  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='!DOCTYPE html'">!DOCTYPE html</option>
+  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='html'">html</option>
+  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='head'">head</option>
+  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='title'">title</option>
+  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='body'">body</option>
+</optgroup>
+<optgroup label="Atribut HTML ">
+  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='<style>html {background-color: ; color: ; font-size: ;}</style>'">style</option>
+  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='script'">script</option>
+  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='br'">br</option>
+  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='<link rel= href=>'">LINK</option>
+  <option type="button" class="btn html-das" title="yang ada tanda ` ` diganti dengan ' '" onClick="document.rrte.ans.value+='<img class=`lazyload` data-src=`...` src=`...` />'">IMAGE</option>
+  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='lang='">LANGUAGE</option>
+  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='strong'">B | STRONG</option>
+  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='code'">code</option>
+</optgroup>
+</select>
+<select class="btn" title="SYMBOLS">
+    <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='<'"><</option>
+    <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='>'">></option>
+    <option type="button" class="btn" value="/" onClick="document.rrte.ans.value+='/'">/</option>
+    <option type="button" class="btn" value=")" onClick="document.rrte.ans.value+=')'">)</option>
+    <option type="button" class="btn" value="(" onClick="document.rrte.ans.value+='('">(</option>
+    <option type="button" class="btn" value="+" onClick="document.rrte.ans.value+='+'">+</option>
+    <option type="button" class="btn" value="-" onClick="document.rrte.ans.value+='-'">-</option>
+    <option type="button" class="btn" value="@" onClick="document.rrte.ans.value+='@'">@</option>
+    <option type="button" class="btn" value="$" onClick="document.rrte.ans.value+='$'">$</option>
+    <option type="button" class="btn" value="#" onClick="document.rrte.ans.value+='#'">#</option>
+    <option type="button" class="btn" value="!" onClick="document.rrte.ans.value+='!'">!</option>
+    <option type="button" class="btn" value="~" onClick="document.rrte.ans.value+='~'">~</option>
+    <option type="button" class="btn" value="`" onClick="document.rrte.ans.value+='`'">`</option>
+    <option type="button" class="btn" value="^" onClick="document.rrte.ans.value+='^'">^</option>
+    <option type="button" class="btn" value="%" onClick="document.rrte.ans.value+='%'">%</option>
+    <option type="button" class="btn" value="&" onClick="document.rrte.ans.value+='&'">&</option>
+    <option type="button" class="btn" value="*" onClick="document.rrte.ans.value+='*'">*</option>
+    <option type="button" class="btn" value="_" onClick="document.rrte.ans.value+='_'">_</option>
+    <option type="button" class="btn" value="[" onClick="document.rrte.ans.value+='['">[</option>
+    <option type="button" class="btn" value="]" onClick="document.rrte.ans.value+=']'">]</option>
+    <option type="button" class="btn" value="|" onClick="document.rrte.ans.value+='|'">|</option>
+    <option type="button" class="btn" value="?" onClick="document.rrte.ans.value+='?'">?</option>
+    <option type="button" class="btn" value="{" onClick="document.rrte.ans.value+='{'">{</option>
+    <option type="button" class="btn" value="}" onClick="document.rrte.ans.value+='}'">}</option>
+    <option type="button" class="btn" value=":" onClick="document.rrte.ans.value+=':'">:</option>
+    <option type="button" class="btn" value=";" onClick="document.rrte.ans.value+=';'">;</option>
+</select>
+<select class="btn emot">
+  <option type="button" class="btn emot" onClick="document.rrte.ans.value+='&#8986;'">&#8986;</option>
+  <option type="button" class="btn emot" onClick="document.rrte.ans.value+='&#8987;'">&#8987;</option>
+  <option type="button" class="btn emot" onClick="document.rrte.ans.value+='&#9193;'">&#9193;</option>
+  <option type="button" class="btn emot" onClick="document.rrte.ans.value+='&#9804;'">&#9804;</option>
+  <option type="button" class="btn emot" onClick="document.rrte.ans.value+='&#9805;'">&#9805;</option>
+</select>
+</div>
+
+<!-- EDITOR WINDOW -->
+<div class="editor slides">
+    <h2 class="title text-center border-bottom">MARKUP and STYLE Editor</h2>
+    <textarea id="code-editor" name="ans" ></textarea>
+</div>
+
+<!-- PREVIEW WINDOW -->
+<div class="preview slides1">
+    <h2 class="title text-center border-bottom">Preview</h2>
+    <iframe id="preview-frame" frameborder="0"></iframe>
+</div>
+<script>
+
+var $ = function(el) {
+    return document.querySelector(el);
+};
+
+function updatePreview(p)
+{
+    $('#preview-frame').contentWindow.document.open();
+    $('#preview-frame').contentWindow.document.write(p);
+    $('#preview-frame').contentWindow.document.close();
+}
+
+$('#code-editor').addEventListener('input', function(e) {
+    updatePreview(this.value);
+});
+
+</script>
+</form>
+</body>
+</html>
