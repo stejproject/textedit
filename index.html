@@ -4,7 +4,16 @@
 <meta charset="utf-8">
 <title>Simple Web Text Editor with Live Preview</title>
 <meta name="google" content="notranslate">
-<link rel="stylesheet" href="style.css">
+<link rel="preload" type="text/css" href="style.css" as="style"
+  onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="style.css">
+</noscript>
+<link rel="preload" type="text/css" href="google.css" as="style"
+  onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="google.css">
+</noscript>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/codemirror.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/theme/monokai.min.css">
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
@@ -80,6 +89,9 @@
   <option type="button" class="btn emot" onClick="document.rrte.ans.value+='&#9804;'">&#9804;</option>
   <option type="button" class="btn emot" onClick="document.rrte.ans.value+='&#9805;'">&#9805;</option>
 </select>
+<script async src="https://cse.google.com/cse.js?cx=539db1daf7a944bad">
+</script>
+<div class="gcse-search"></div>
 </div>
 
 <!-- EDITOR WINDOW -->
