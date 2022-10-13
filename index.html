@@ -24,72 +24,77 @@
 <body>
   <h2 class="title text-center border-bottom">Simple Live Preview Web Text Editor</h2>
   <script>
-    alert("Perhatian sebentar, jika di handphone opsi drop-down tidak akan berfungsi semestinya ya. Terima kasih")
+    alert("Perhatian sebentar. Diluar mesin layout Gecko, opsi drop-down tidak akan berfungsi semestinya ya. Terima kasih")
   </script>
   <form name="rrte">
   <!-- NAVBAR -->
   <div class="navbar text-center">
-<input type="reset" value="DELETE EDIT" class="btn dang">
-<input type="button" value="LOREM IPSUM" class="btn texted" onClick="document.rrte.ans.value+='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'">
-<select class="btn html-das">
-  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='<...>'">HTML tag buka</option>
-  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='</...>'">HTML tag tutup</option>
-<optgroup label="TAG HTML WAJIB">
-  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='!DOCTYPE html'">!DOCTYPE html</option>
-  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='html'">html</option>
-  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='head'">head</option>
-  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='title'">title</option>
-  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='body'">body</option>
-</optgroup>
-<optgroup label="Atribut HTML ">
-  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='<style>html {background-color: ; color: ; font-size: ;}</style>'">style</option>
-  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='script'">script</option>
-  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='br'">br</option>
-  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='<link rel= href=>'">LINK</option>
-  <option type="button" class="btn html-das" title="yang ada tanda ` ` diganti dengan ' '" onClick="document.rrte.ans.value+='<img class=`lazyload` data-src=`...` src=`...` />'">IMAGE</option>
-  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='lang='">LANGUAGE</option>
-  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='strong'">B | STRONG</option>
-  <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='code'">code</option>
-</optgroup>
-</select>
-<select class="btn" title="SYMBOLS">
-    <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='<'"><</option>
-    <option type="button" class="btn html-das" onClick="document.rrte.ans.value+='>'">></option>
-    <option type="button" class="btn" value="/" onClick="document.rrte.ans.value+='/'">/</option>
-    <option type="button" class="btn" value=")" onClick="document.rrte.ans.value+=')'">)</option>
-    <option type="button" class="btn" value="(" onClick="document.rrte.ans.value+='('">(</option>
-    <option type="button" class="btn" value="+" onClick="document.rrte.ans.value+='+'">+</option>
-    <option type="button" class="btn" value="-" onClick="document.rrte.ans.value+='-'">-</option>
-    <option type="button" class="btn" value="@" onClick="document.rrte.ans.value+='@'">@</option>
-    <option type="button" class="btn" value="$" onClick="document.rrte.ans.value+='$'">$</option>
-    <option type="button" class="btn" value="#" onClick="document.rrte.ans.value+='#'">#</option>
-    <option type="button" class="btn" value="!" onClick="document.rrte.ans.value+='!'">!</option>
-    <option type="button" class="btn" value="~" onClick="document.rrte.ans.value+='~'">~</option>
-    <option type="button" class="btn" value="`" onClick="document.rrte.ans.value+='`'">`</option>
-    <option type="button" class="btn" value="^" onClick="document.rrte.ans.value+='^'">^</option>
-    <option type="button" class="btn" value="%" onClick="document.rrte.ans.value+='%'">%</option>
-    <option type="button" class="btn" value="&" onClick="document.rrte.ans.value+='&'">&</option>
-    <option type="button" class="btn" value="*" onClick="document.rrte.ans.value+='*'">*</option>
-    <option type="button" class="btn" value="_" onClick="document.rrte.ans.value+='_'">_</option>
-    <option type="button" class="btn" value="[" onClick="document.rrte.ans.value+='['">[</option>
-    <option type="button" class="btn" value="]" onClick="document.rrte.ans.value+=']'">]</option>
-    <option type="button" class="btn" value="|" onClick="document.rrte.ans.value+='|'">|</option>
-    <option type="button" class="btn" value="?" onClick="document.rrte.ans.value+='?'">?</option>
-    <option type="button" class="btn" value="{" onClick="document.rrte.ans.value+='{'">{</option>
-    <option type="button" class="btn" value="}" onClick="document.rrte.ans.value+='}'">}</option>
-    <option type="button" class="btn" value=":" onClick="document.rrte.ans.value+=':'">:</option>
-    <option type="button" class="btn" value=";" onClick="document.rrte.ans.value+=';'">;</option>
-</select>
-<select class="btn emot">
+<ul>
+	<li><input type="reset" value="DELETE EDIT" class="btn dang"></li>
+	<li><input type="button" value="LOREM IPSUM" class="btn texted" onClick="document.rrte.ans.value+='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'"></li>
+	<li class="dropdown btn html-das"><a href="">HTML</a>
+		<ul class="isi-dropdown">
+			<li><input type="button" class="btn html-das" value="HTML Tag Pembuka" onClick="document.rrte.ans.value+='<...>'"></li>
+			<li><input type="button" class="btn html-das" value="HTML Tag Penutup" onClick="document.rrte.ans.value+='</...>'"></li>
+			<li label="TAG HTML WAJIB" style="font-weight: bold;"></li>
+      <li><input type="button" class="btn html-das" value="!DOCTYPE html" onClick="document.rrte.ans.value+='!DOCTYPE html'"></li>
+      <li><input type="button" class="btn html-das" value="html" onClick="document.rrte.ans.value+='html'"></li>
+      <li><input type="button" class="btn html-das" value="head" onClick="document.rrte.ans.value+='head'"></li>
+      <li><input type="button" class="btn html-das" value="title" onClick="document.rrte.ans.value+='title'"></li>
+      <li><input type="button" class="btn html-das" value="body" onClick="document.rrte.ans.value+='body'"></li>
+      <li label="Atribut HTML" style="font-weight: bold;"></li>
+      <li><input type="button" class="btn html-das" value="" onClick="document.rrte.ans.value+='<style>html {background-color: ; color: ; font-size: ;}</style>'">style</li>
+      <li><input type="button" class="btn html-das" value="" onClick="document.rrte.ans.value+='script'">script</li>
+      <li><input type="button" class="btn html-das" value="" onClick="document.rrte.ans.value+='br'">br</li>
+      <li><input type="button" class="btn html-das" value="" onClick="document.rrte.ans.value+='<link rel= href=>'">LINK</li>
+      <li><input type="button" class="btn html-das" value="" title="yang ada tanda ` ` diganti dengan ' '" onClick="document.rrte.ans.value+='<img class=`lazyload` data-src=`...` src=`...` />'">IMAGE</li>
+      <li><input type="button" class="btn html-das" value="" onClick="document.rrte.ans.value+='lang='">LANGUAGE</li>
+      <li><input type="button" class="btn html-das" value="" onClick="document.rrte.ans.value+='strong'">B | STRONG</li>
+      <li><input type="button" class="btn html-das" value="" onClick="document.rrte.ans.value+='code'">code</li>
+		</ul>
+	</li>
+<li class="dropdown btn"><a href="">SYMBOLS</a>
+<ul class="isi-dropdown">
+    <li><option type="button" class="btn html-das" onClick="document.rrte.ans.value+='<'"><</option></li>
+    <li><option type="button" class="btn html-das" onClick="document.rrte.ans.value+='>'">></option></li>
+    <li><option type="button" class="btn" value="/" onClick="document.rrte.ans.value+='/'">/</option></li>
+    <li><option type="button" class="btn" value=")" onClick="document.rrte.ans.value+=')'">)</option></li>
+    <li><option type="button" class="btn" value="(" onClick="document.rrte.ans.value+='('">(</option></li>
+    <li><option type="button" class="btn" value="+" onClick="document.rrte.ans.value+='+'">+</option></li>
+    <li><option type="button" class="btn" value="-" onClick="document.rrte.ans.value+='-'">-</option></li>
+    <li><option type="button" class="btn" value="@" onClick="document.rrte.ans.value+='@'">@</option></li>
+    <li><option type="button" class="btn" value="$" onClick="document.rrte.ans.value+='$'">$</option></li>
+    <li><option type="button" class="btn" value="#" onClick="document.rrte.ans.value+='#'">#</option></li>
+    <li><option type="button" class="btn" value="!" onClick="document.rrte.ans.value+='!'">!</option></li>
+    <li><option type="button" class="btn" value="~" onClick="document.rrte.ans.value+='~'">~</option></li>
+    <li><option type="button" class="btn" value="`" onClick="document.rrte.ans.value+='`'">`</option></li>
+    <li><option type="button" class="btn" value="^" onClick="document.rrte.ans.value+='^'">^</option></li>
+    <li><option type="button" class="btn" value="%" onClick="document.rrte.ans.value+='%'">%</option></li>
+    <li><option type="button" class="btn" value="&" onClick="document.rrte.ans.value+='&'">&</option></li>
+    <li><option type="button" class="btn" value="*" onClick="document.rrte.ans.value+='*'">*</option></li>
+    <li><option type="button" class="btn" value="_" onClick="document.rrte.ans.value+='_'">_</option></li>
+    <li><option type="button" class="btn" value="[" onClick="document.rrte.ans.value+='['">[</option></li>
+    <li><option type="button" class="btn" value="]" onClick="document.rrte.ans.value+=']'">]</option></li>
+    <li><option type="button" class="btn" value="|" onClick="document.rrte.ans.value+='|'">|</option></li>
+    <li><option type="button" class="btn" value="?" onClick="document.rrte.ans.value+='?'">?</option></li>
+    <li><option type="button" class="btn" value="{" onClick="document.rrte.ans.value+='{'">{</option></li>
+    <li><option type="button" class="btn" value="}" onClick="document.rrte.ans.value+='}'">}</option></li>
+    <li><option type="button" class="btn" value=":" onClick="document.rrte.ans.value+=':'">:</option></li>
+    <li><option type="button" class="btn" value=";" onClick="document.rrte.ans.value+=';'">;</option></li>
+</ul>
+</li>
+<li class="dropdown btn emot"><a href="">EMOTICONS</a>
+<ul class="isi-dropdown">
   <option type="button" class="btn emot" onClick="document.rrte.ans.value+='&#8986;'">&#8986;</option>
   <option type="button" class="btn emot" onClick="document.rrte.ans.value+='&#8987;'">&#8987;</option>
   <option type="button" class="btn emot" onClick="document.rrte.ans.value+='&#9193;'">&#9193;</option>
   <option type="button" class="btn emot" onClick="document.rrte.ans.value+='&#9804;'">&#9804;</option>
   <option type="button" class="btn emot" onClick="document.rrte.ans.value+='&#9805;'">&#9805;</option>
-</select>
-  <script src="copy.js" async></script>
-  <input type="button" class="btn" value="Copy Text" onclick="copyText()">
-  <input type="button" value="Search Help?" class="btn" onclick="window.open('sear.html');" style="width: 50%; margin: 10px auto;">
+</ul>
+</li>
+  <li><input type="button" class="btn" value="Copy Text" onclick="copyText()"><script src="copy.js" async></script></li>
+  <li><input type="button" value="Search Help?" class="btn" onclick="window.open('sear.html');" style="width: 50%; margin: 10px auto;"></li>
+</ul>
 </div>
 
 <!-- EDITOR WINDOW -->
