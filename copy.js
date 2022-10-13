@@ -6,4 +6,4 @@ function paste() {
   console.log(pasteText.textContent);
 }
 
-document.querySelector("#paste").addEventListener("click", paste);
+document.querySelector("#cod").addEventListener("click", paste);
