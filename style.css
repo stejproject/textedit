@@ -106,7 +106,10 @@ h2.title {
 
 li.dropdown {
 		display: inline-block;
-    list-style: none;
+}
+
+li {
+  list-style: none;
 }
 
 	.dropdown:hover .isi-dropdown {
