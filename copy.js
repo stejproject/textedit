@@ -1,9 +1,6 @@
 // Copy and paste in javascripts
-function paste() {
-  let pasteText = document.querySelector("#code-editor");
-  pasteText.focus();
-  document.execCommand("paste");
-  console.log(pasteText.textContent);
+function copyText() {  
+    var copyText = document.getElementById("code-editor");
+    copyText.select();
+    document.execCommand("copy");
 }
-
-document.querySelector("#cod").addEventListener("click", paste);
