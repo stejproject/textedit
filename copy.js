@@ -1,15 +1,6 @@
-document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
-  const inputField = copyLinkParent.querySelector(".copy-link-input");
-  const copyButton = copyLinkParent.querySelector(".copy-link-button");
-  const text = inputField.value;
-
-  inputField.addEventListener("focus", () => inputField.select());
-
-  copyButton.addEventListener("click", () => {
-    inputField.select();
-    navigator.clipboard.writeText(text);
-
-    inputField.value = "Copied!";
-    setTimeout(() => (inputField.value = text), 2000);
-  });
-});
+//Pass the id of the <input> element to be copied as a parameter to the copy()
+let copy = (code-editorId) => {
+  //Selects the text in the <input> elemet
+  document.getElementById(code-editorId).select();
+  //Copies the selected text to clipboard
+  document.execCommand("copy");};

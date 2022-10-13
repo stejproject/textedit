@@ -88,18 +88,14 @@
   <option type="button" class="btn emot" onClick="document.rrte.ans.value+='&#9804;'">&#9804;</option>
   <option type="button" class="btn emot" onClick="document.rrte.ans.value+='&#9805;'">&#9805;</option>
 </select>
+  <button onclick="copy('code-editor')">Copy Text</button>
   <input type="button" value="Search Help?" class="btn" onclick="window.open('sear.html');" style="width: 50%; margin: 10px auto;">
 </div>
 
 <!-- EDITOR WINDOW -->
 <div class="editor slides">
     <h2 class="title text-center border-bottom">MARKUP and STYLE Editor</h2>
-    <div class="copy-link">
-      <button type="button" class="copy-link-button">
-        <span class="material-icons">COPY SCRIPTS!</span>
-      </button>
-    <textarea id="code-editor" name="ans" class="copy-link-input" ></textarea>
-    </div>
+    <textarea type="text" id="code-editor" name="ans"></textarea>
 </div>
 
 <!-- PREVIEW WINDOW -->
