@@ -29,20 +29,22 @@
   <form name="rrte">
   <!-- NAVBAR -->
   <div class="navbar text-center">
+    <input type="reset" value="DELETE EDIT" class="btn dang">
+    <input type="button" value="LOREM IPSUM" class="btn texted" onClick="document.rrte.ans.value+='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'">
+    <input type="button" class="btn" value="Copy Text" onclick="copyText()"><script src="copy.js" async></script>
+    <input type="button" value="Search Help?" class="btn" onclick="window.open('sear.html');" style="width: 50%; margin: 10px auto;">
 <ul>
-	<li><input type="reset" value="DELETE EDIT" class="btn dang"></li>
-	<li><input type="button" value="LOREM IPSUM" class="btn texted" onClick="document.rrte.ans.value+='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'"></li>
-	<li class="dropdown btn html-das"><a href="">HTML</a>
+	<li class="dropdown btn html-das">HTML</a>
 		<ul class="isi-dropdown">
 			<li><input type="button" class="btn html-das" value="HTML Tag Pembuka" onClick="document.rrte.ans.value+='<...>'"></li>
 			<li><input type="button" class="btn html-das" value="HTML Tag Penutup" onClick="document.rrte.ans.value+='</...>'"></li>
-			<li label="TAG HTML WAJIB" style="font-weight: bold;"></li>
+			<li style="font-weight: bold;">ESSENTIAL HTML TAGS</li>
       <li><input type="button" class="btn html-das" value="!DOCTYPE html" onClick="document.rrte.ans.value+='!DOCTYPE html'"></li>
       <li><input type="button" class="btn html-das" value="html" onClick="document.rrte.ans.value+='html'"></li>
       <li><input type="button" class="btn html-das" value="head" onClick="document.rrte.ans.value+='head'"></li>
       <li><input type="button" class="btn html-das" value="title" onClick="document.rrte.ans.value+='title'"></li>
       <li><input type="button" class="btn html-das" value="body" onClick="document.rrte.ans.value+='body'"></li>
-      <li label="Atribut HTML" style="font-weight: bold;"></li>
+      <li style="font-weight: bold;">ESSENTIAL HTML attributes</li>
       <li><input type="button" class="btn html-das" value="style" onClick="document.rrte.ans.value+='<style>html {background-color: ; color: ; font-size: ;}</style>'"></li>
       <li><input type="button" class="btn html-das" value="scripts" onClick="document.rrte.ans.value+='script'"></li>
       <li><input type="button" class="btn html-das" value="br" onClick="document.rrte.ans.value+='br'"></li>
@@ -53,7 +55,7 @@
       <li><input type="button" class="btn html-das" value="code" onClick="document.rrte.ans.value+='code'"></li>
 		</ul>
 	</li>
-<li class="dropdown btn"><a href="">SYMBOLS</a>
+<li class="dropdown btn">SYMBOLS</a>
 <ul class="isi-dropdown">
     <li><option type="button" class="btn html-das" onClick="document.rrte.ans.value+='<'"><</option></li>
     <li><option type="button" class="btn html-das" onClick="document.rrte.ans.value+='>'">></option></li>
@@ -92,8 +94,6 @@
   <option type="button" class="btn emot" onClick="document.rrte.ans.value+='&#9805;'">&#9805;</option>
 </ul>
 </li>
-  <li><input type="button" class="btn" value="Copy Text" onclick="copyText()"><script src="copy.js" async></script></li>
-  <li><input type="button" value="Search Help?" class="btn" onclick="window.open('sear.html');" style="width: 50%; margin: 10px auto;"></li>
 </ul>
 </div>
 
