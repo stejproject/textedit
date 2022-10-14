@@ -158,7 +158,7 @@ ul {
 }
 @media screen and (min-width: 720px) {
     .editor {
-        width: 50%;
+        width: 100%;
         float: left;
         padding-bottom: 0;
     }
@@ -168,7 +168,7 @@ ul {
         border-bottom: 1px dotted #999;
     }
     .preview {
-        width: 50%;
+        width: 100%;
         float: left;
     }
     .full-width {
