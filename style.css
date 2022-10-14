@@ -119,10 +119,21 @@ ul {
   display: none;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  background-color: #f9f9f9;
+  background-color: #f9f9f900;
+  border-radius: 5px;
   height:100px;
   width: 20%;
   overflow-y: visible;
+  scrollbar-width: none;
+}
+
+.isi-dropdown::-webkit-scrollbar {
+  width: 0px;
+  background-color: transparent;
+}
+
+.isi-dropdown::-webkit-scrollbar-thumb, .isi-dropdown::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 .dang {
