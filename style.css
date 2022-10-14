@@ -158,6 +158,27 @@ ul {
 }
 @media screen and (min-width: 720px) {
     .editor {
+        width: 50%;
+        float: left;
+        padding-bottom: 0;
+    }
+    .menu {
+        width: 300px;
+        border-right: 1px dotted #999;
+        border-bottom: 1px dotted #999;
+    }
+    .preview {
+        width: 50%;
+        float: left;
+    }
+    .full-width {
+        width: 100%;
+        float: initial;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .editor {
         width: 100%;
         float: left;
         padding-bottom: 0;
