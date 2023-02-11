@@ -20,6 +20,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/javascript/javascript.min.js" async></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/css/css.min.js" async></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/htmlmixed/htmlmixed.min.js" async></script>
+<script src="https://stejproject.github.io/sys/js/time.js" defer></script>
 </head>
 <body>
   <h2 class="title text-center border-bottom">Simple Live Preview Web Text Editor</h2>
@@ -29,6 +30,9 @@
   <form name="rrte">
   <!-- NAVBAR -->
   <div class="navbar text-center">
+    <div class="footer">
+      <p>Copyright &copy; <span id="time"></span>. Hosted by <a href="https://stejproject.github.io/" target="_blank">STEJ Project</a></p>
+    </div>
     <input type="reset" value="DELETE EDIT" class="btn dang">
     <input type="button" value="LOREM IPSUM" class="btn texted" onClick="document.rrte.ans.value+='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'">
     <input type="button" class="btn" value="Copy Scripts | Text" onclick="copyText()"><script src="copy.js" async></script>
@@ -108,6 +112,7 @@
     <h2 class="title text-center border-bottom">Preview</h2>
     <iframe id="preview-frame" frameborder="0"></iframe>
 </div>
+
 <script>
 
 var $ = function(el) {
@@ -127,5 +132,6 @@ $('#code-editor').addEventListener('input', function(e) {
 
 </script>
 </form>
+
 </body>
 </html>
