@@ -1,67 +1,77 @@
 html {
-    height: 100%;
-    overflow-x: hidden;
+  height: 100%;
+  overflow-x: hidden;
 }
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
+
 body {
-    font-family: "Georgia", "Arial", "Serif";
-    width: 100%;
-    position: relative;
-    min-height: 100%;
-    box-sizing: border-box;
-    height: 100%;
-    color: #999;
-    background-color: #272822;
+  font-family: "Georgia", "Arial", "Serif";
+  width: 100%;
+  position: relative;
+  min-height: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  color: #999;
+  background-color: #272822;
 }
+
 form {
   height: 90%;
 }
 
 h2.title {
-    display: block;
-    width: 100%;
-    padding: 0.5em 0.5em 0.5em 1em;
-    font-size: 1.2em;
-    font-weight: normal;
-    box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 0.5em 0.5em 0.5em 1em;
+  font-size: 1.2em;
+  font-weight: normal;
+  box-sizing: border-box;
 }
+
 .text-center {
-    text-align: center;
+  text-align: center;
 }
+
 .hide {
-    display: none;
+  display: none;
 }
+
 .border-bottom {
-    border-bottom: 1px solid #333;
+  border-bottom: 1px solid #333;
 }
-.editor, .preview {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    box-sizing: border-box;
+
+.editor,
+.preview {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
 }
+
 .editor #code-editor {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 93%;
-    background-color: #272822;
-    font-family: monospace;
-    font-size: 18px;
-    resize: none;
-    overflow-x: hidden;
-    color: greenyellow;
-    font-size: 25px;
-    border: 1px solid greenyellow;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 93%;
+  background-color: #272822;
+  font-family: monospace;
+  font-size: 18px;
+  resize: none;
+  overflow-x: hidden;
+  color: greenyellow;
+  font-size: 25px;
+  border: 1px solid greenyellow;
 }
 
-.editor #code-editor:hover, .editor #code-editor:active, .editor #code-editor:focus {
-    border: 1px solid transparent;
+.editor #code-editor:hover,
+.editor #code-editor:active,
+.editor #code-editor:focus {
+  border: 1px solid transparent;
 }
-
 
 .slides {
   resize: horizontal;
@@ -74,13 +84,13 @@ h2.title {
 }
 
 .preview #preview-frame {
-    height: 93%;
-    width: 100%;
-    border: none;
-    background-color: #fff;
-    border-width: inherit;
-    border: 1px solid #2f9eff;
-    overflow: auto;
+  height: 93%;
+  width: 100%;
+  border: none;
+  background-color: #fff;
+  border-width: inherit;
+  border: 1px solid #2f9eff;
+  overflow: auto;
 }
 
 .btn {
@@ -90,13 +100,14 @@ h2.title {
   margin: 1px;
   padding: 5px;
 }
+
 .btn:hover {
   color: black;
   background-color: white;
 }
 
 li.dropdown {
-		display: inline-block;
+  display: inline-block;
 }
 
 ul {
@@ -106,22 +117,24 @@ ul {
   overflow: hidden;
 }
 
-	.dropdown:visited .isi-dropdown {
-		display: block;
-	}
+.dropdown:active .isi-dropdown {
+  display: block;
+}
 
-	.isi-dropdown a:visited {
-		color: #fff !important;
-	}
-  .isi-dropdown {
+.isi-dropdown a:active {
+  color: #fff !important;
+}
+
+.isi-dropdown {
   position: absolute;
   display: none;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   background-color: #f9f9f900;
   border-radius: 5px;
-  height:100px;
-  width: 20%;
+  height: 100px;
+  width: 50%;
+  transform: translate(50%, 50%);
   overflow-y: visible;
   scrollbar-width: none;
 }
@@ -131,7 +144,8 @@ ul {
   background-color: transparent;
 }
 
-.isi-dropdown::-webkit-scrollbar-thumb, .isi-dropdown::-webkit-scrollbar-track {
+.isi-dropdown::-webkit-scrollbar-thumb,
+.isi-dropdown::-webkit-scrollbar-track {
   background-color: transparent;
 }
 
@@ -142,13 +156,16 @@ ul {
   margin: 1px;
   padding: 5px;
 }
-.texted, .emot {
+
+.texted,
+.emot {
   background-color: purple;
   color: #fafafa;
   border-radius: 15px;
   margin: 1px;
   padding: 5px;
 }
+
 .html-das {
   background-color: green;
   color: #fafafa;
@@ -168,8 +185,8 @@ a:hover {
 }
 
 .navbar {
-  overflow-x: hidden; 
-  overflow-y: scroll; 
+  overflow-x: hidden;
+  overflow-y: scroll;
   height: 35px;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -180,7 +197,8 @@ a:hover {
   background-color: transparent;
 }
 
-.navbar::-webkit-scrollbar-thumb, .navbar::-webkit-scrollbar-track {
+.navbar::-webkit-scrollbar-thumb,
+.navbar::-webkit-scrollbar-track {
   background-color: transparent;
 }
 
@@ -190,43 +208,50 @@ a:hover {
 }
 
 @media screen and (min-width: 720px) {
-    .editor {
-        width: 50%;
-        float: left;
-        padding-bottom: 0;
-    }
-    .menu {
-        width: 300px;
-        border-right: 1px dotted #999;
-        border-bottom: 1px dotted #999;
-    }
-    .preview {
-        width: 50%;
-        float: left;
-    }
-    .full-width {
-        width: 100%;
-        float: initial;
-    }
+  .editor {
+    width: 50%;
+    float: left;
+    padding-bottom: 0;
+  }
+
+  .menu {
+    width: 300px;
+    border-right: 1px dotted #999;
+    border-bottom: 1px dotted #999;
+  }
+
+  .preview {
+    width: 50%;
+    float: left;
+  }
+
+  .full-width {
+    width: 100%;
+    float: initial;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .editor {
-        width: 100%;
-        float: left;
-        padding-bottom: 0;
-    }
-    .menu {
-        width: 300px;
-        border-right: 1px dotted #999;
-        border-bottom: 1px dotted #999;
-    }
-    .preview {
-        width: 100%;
-        float: left;
-    }
-    .full-width {
-        width: 100%;
-        float: initial;
-    }
+  .editor {
+    width: 100%;
+    float: left;
+    padding-bottom: 0;
+  }
+
+  .menu {
+    width: 300px;
+    border-right: 1px dotted #999;
+    border-bottom: 1px dotted #999;
+  }
+
+  .preview {
+    width: 100%;
+    float: left;
+  }
+
+  .full-width {
+    width: 100%;
+    float: initial;
+  }
 }
+
