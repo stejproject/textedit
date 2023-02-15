@@ -110,7 +110,7 @@
 <!-- EDITOR WINDOW -->
 <div class="editor slides">
     <h2 class="title text-center border-bottom">MARKUP and STYLE Editor</h2>
-    <textarea type="text" id="code-editor code" name="ans"></textarea>
+    <textarea type="text" id="code-editor" name="ans"></textarea>
 </div>
 
 <!-- PREVIEW WINDOW -->
@@ -139,7 +139,7 @@ $('#code-editor').addEventListener('input', function(e) {
 </script>
 <script>
   window.onload = function() {
-    editor = CodeMirror(document.getElementById("code"), {
+    editor = CodeMirror(document.getElementById("code-editor"), {
       mode: "text/html",
       extraKeys: {"Ctrl-Space": "autocomplete"},
       value: document.documentElement.innerHTML

@@ -117,7 +117,7 @@ ul {
   overflow: hidden;
 }
 
-.dropdown:active .isi-dropdown {
+.dropdown:hover .isi-dropdown {
   display: block;
 }
 
@@ -134,7 +134,7 @@ ul {
   border-radius: 5px;
   height: 100px;
   width: 50%;
-  transform: translate(50%, 50%);
+  transform: translate(-48%, -55%);
   overflow-y: visible;
   scrollbar-width: none;
 }
