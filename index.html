@@ -22,6 +22,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/python/python.min.js" async></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/css/css.min.js" async></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/htmlmixed/htmlmixed.min.js" async></script>
+  <script src="../addon/hint/show-hint.js" defer></script>
+  <script src="../addon/hint/xml-hint.js" defer></script>
+  <script src="../addon/hint/html-hint.js" defer></script>
 <script src="https://stejproject.github.io/sys/js/time.js" defer></script>
 <script src="dropdown.js" defer></script>
 </head>
@@ -133,6 +136,15 @@ $('#code-editor').addEventListener('input', function(e) {
     updatePreview(this.value);
 });
 
+</script>
+<script>
+  window.onload = function() {
+    editor = CodeMirror(document.getElementById("code"), {
+      mode: "text/html",
+      extraKeys: {"Ctrl-Space": "autocomplete"},
+      value: document.documentElement.innerHTML
+    });
+  };
 </script>
 </form>
 
